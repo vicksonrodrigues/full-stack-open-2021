@@ -1,0 +1,36 @@
+title Exercise 0.6:New note 
+Browser-> Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server-> Browser:HTML-code
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-> Browser:main.code
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser:spa.js
+
+note over Browser:
+Browser starts executing spa.js
+that requests JSON data from server 
+end note
+
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser:[{ content: "hiiii", date: "2021-08-26" }, ...]
+
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
+
+note left of Browser:
+The user fills the form and submits it.
+end note
+
+Browser->Server:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over Browser:
+Browser sends new note containing both 
+the content of the note and the timestamp 
+as JSON-data along with POST request 
+end note
+Server->Browser:Responds with status code "201 created"
+note over Browser:
+Browser executes the event handler
+that rerenders notes to display
+end note
