@@ -1,11 +1,14 @@
+let timeId = 0
+
 export const setNotification = (notification, displayTime) => {
   return async dispatch => {
+    clearTimeout(timeId)
     dispatch({
       type: 'SHOW_NOTIFICATION',
       notification,
     })
 
-    setTimeout(() => {
+    timeId = setTimeout(() => {
       dispatch({
         type: 'HIDE_NOTIFICATION',
         notification: null
