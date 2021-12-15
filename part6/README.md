@@ -1,0 +1,1 @@
+Solution for Part 6 Exercise
