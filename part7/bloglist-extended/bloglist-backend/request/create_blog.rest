@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpY2tzb24iLCJpZCI6IjYxODE4ZTlkOTJmMzZjNDZlMzA1NGY1ZCIsImlhdCI6MTYzNTk2NzU5MX0.qucLmXb_EFDrlhnCC92KD4J8AJlzDP4KZfATH-IWlfY
+
+{
+    "title": "Various test methods",
+    "author": "Robert C. Mart",
+    "url": "http://blog.cleancoders.com/uncle-bob/2017/05/05/TestDefinitions.html",
+    "likes": 13
+}

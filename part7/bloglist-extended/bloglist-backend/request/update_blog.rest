@@ -1,0 +1,10 @@
+PUT  http://localhost:3001/api/blogs/61904a47b0bfbe428405f1be
+Content-Type: application/json
+
+{
+    "author": "Dan brown",
+    "likes": 1,
+    "title": "React 101",
+    "url": "http://www.techden.com/kdsf/rtyd25tR",
+    "user": "618fd91cdaf7ae3a5000f44a"
+}
